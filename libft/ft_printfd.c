@@ -1,33 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_printfd.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maguimar <maguimar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/08 12:18:57 by maguimar          #+#    #+#             */
-/*   Updated: 2022/11/11 16:21:37 by maguimar         ###   ########.fr       */
+/*   Created: 2022/12/05 12:05:03 by maguimar          #+#    #+#             */
+/*   Updated: 2022/12/06 14:51:37 by maguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-char *ft_strdup(const char *s)
+int	ft_printfd(long nb)
 {
-	char *dup;
-	int len;
-	int i;
+	int	count;
 
-	i = 0;
-	len = ft_strlen(s);
-	dup = (char *)malloc(sizeof(char) * (len + 1));
-	if (!dup)
-		return (NULL);
-	while (i < len)
+	count = 0;
+	if (nb < 0)
 	{
-		dup[i] = s[i];
-		i++;
+		nb *= -1;
+		count += ft_printfc('-');
 	}
-	dup[i] = '\0';
-	return (dup);
+	if (nb < 10)
+	{
+		count += ft_printfc(nb + '0');
+	}
+	else if (nb >= 10)
+	{
+		count += ft_printfd(nb / 10);
+		count += ft_printfd(nb % 10);
+	}
+	return (count);
 }

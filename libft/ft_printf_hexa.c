@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_printf_hexa.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maguimar <maguimar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/08 12:18:57 by maguimar          #+#    #+#             */
-/*   Updated: 2022/11/11 16:21:37 by maguimar         ###   ########.fr       */
+/*   Created: 2022/12/05 15:50:25 by maguimar          #+#    #+#             */
+/*   Updated: 2022/12/06 14:52:07 by maguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-char *ft_strdup(const char *s)
+int	ft_printf_hexa(char c, unsigned long nb)
 {
-	char *dup;
-	int len;
-	int i;
+	int		count;
+	char	*base;
 
-	i = 0;
-	len = ft_strlen(s);
-	dup = (char *)malloc(sizeof(char) * (len + 1));
-	if (!dup)
-		return (NULL);
-	while (i < len)
+	count = 0;
+	if (c == 'x')
+		base = "0123456789abcdef";
+	if (c == 'X')
+		base = "0123456789ABCDEF";
+	if (nb < 16)
+		count += ft_printfc(*(base + nb));
+	else if (nb >= 16)
 	{
-		dup[i] = s[i];
-		i++;
+		count += ft_printf_hexa(c, nb / 16);
+		count += ft_printf_hexa(c, nb % 16);
 	}
-	dup[i] = '\0';
-	return (dup);
+	return (count);
 }

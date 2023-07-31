@@ -1,33 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_printfs.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maguimar <maguimar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/08 12:18:57 by maguimar          #+#    #+#             */
-/*   Updated: 2022/11/11 16:21:37 by maguimar         ###   ########.fr       */
+/*   Created: 2022/12/05 11:39:27 by maguimar          #+#    #+#             */
+/*   Updated: 2022/12/05 16:47:12 by maguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-char *ft_strdup(const char *s)
+int	ft_printfs(char *str)
 {
-	char *dup;
-	int len;
-	int i;
+	int	i;
 
 	i = 0;
-	len = ft_strlen(s);
-	dup = (char *)malloc(sizeof(char) * (len + 1));
-	if (!dup)
-		return (NULL);
-	while (i < len)
+	if (!str)
+		return (write(1, "(null)", 6));
+	while (str[i])
 	{
-		dup[i] = s[i];
+		write(1, &str[i], 1);
 		i++;
 	}
-	dup[i] = '\0';
-	return (dup);
+	return (i);
 }

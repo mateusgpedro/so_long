@@ -1,33 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_printfu.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maguimar <maguimar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/08 12:18:57 by maguimar          #+#    #+#             */
-/*   Updated: 2022/11/11 16:21:37 by maguimar         ###   ########.fr       */
+/*   Created: 2022/12/05 13:49:23 by maguimar          #+#    #+#             */
+/*   Updated: 2022/12/06 16:29:33 by maguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-char *ft_strdup(const char *s)
+int	ft_printfu(unsigned int nb)
 {
-	char *dup;
-	int len;
-	int i;
+	int	count;
 
-	i = 0;
-	len = ft_strlen(s);
-	dup = (char *)malloc(sizeof(char) * (len + 1));
-	if (!dup)
-		return (NULL);
-	while (i < len)
+	count = 0;
+	if (nb < 10)
 	{
-		dup[i] = s[i];
-		i++;
+		count += ft_printfc(nb + '0');
 	}
-	dup[i] = '\0';
-	return (dup);
+	else if (nb >= 10)
+	{
+		count += ft_printfd(nb / 10);
+		count += ft_printfd(nb % 10);
+	}
+	return (count);
 }

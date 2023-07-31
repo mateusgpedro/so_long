@@ -1,45 +1,24 @@
 #ifndef SO_LONG_H
 # define SO_LONG_H
 
-# pragma region // INCLUDES
-
 #include "get_next_line.h"
+#include "../libft/ft_printf.h"
 #include "../libft/libft.h"
 #include "../minilibx-linux/mlx.h"
-
-# pragma endregion
-
-# pragma region // KEYWORDS
-
-typedef enum {
-    true = 1;
-    false = 0;
-}       bool
-
-# define foreach(item, array, size) \
-    size_t i; \
-\
-    i = 0; \
-    while (i < size) \
-    { \
-        item = array[i]; \
-        
-
-# define endforeach \
-        i++; \
-    }
-# pragma endregion
-
-# pragma region // STRUCTS
+#include <stdbool.h>
 
 typedef struct s_data{
-    int collectibles;
-}               t_data
+	int collectibles;
+}               t_data;
 
-# pragma endregion
+typedef enum s_error {
+	INVALID_INPUT = 0,
+	FILE_NOT_FOUND = 1
+}				t_error;
 
-# pragma region // FUNCTIONS
-
-#pragma endregion
+// - - - Functions - - - 
+bool    is_valid_input(char *str);
+void	get_error(t_error error);
+bool	validate_map(char *str);
 
 #endif

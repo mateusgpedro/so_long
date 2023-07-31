@@ -1,33 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maguimar <maguimar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/08 12:18:57 by maguimar          #+#    #+#             */
-/*   Updated: 2022/11/11 16:21:37 by maguimar         ###   ########.fr       */
+/*   Created: 2022/11/28 14:00:45 by maguimar          #+#    #+#             */
+/*   Updated: 2022/12/05 16:56:57 by maguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
-char *ft_strdup(const char *s)
-{
-	char *dup;
-	int len;
-	int i;
+# include <stdarg.h>
+# include <unistd.h>
+# include <stdio.h>
 
-	i = 0;
-	len = ft_strlen(s);
-	dup = (char *)malloc(sizeof(char) * (len + 1));
-	if (!dup)
-		return (NULL);
-	while (i < len)
-	{
-		dup[i] = s[i];
-		i++;
-	}
-	dup[i] = '\0';
-	return (dup);
-}
+int	ft_printf(const char *format, ...);
+int	ft_printfc(char str);
+int	ft_printfs(char *str);
+int	ft_printfd(long nb);
+int	ft_printfu(unsigned int nb);
+int	ft_printf_hexa(char c, unsigned long nb);
+int	ft_printfp(unsigned long nb);
+
+#endif
