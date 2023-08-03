@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   verifications.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: maguimar <maguimar@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/08/03 12:16:21 by maguimar          #+#    #+#             */
+/*   Updated: 2023/08/03 14:24:31 by maguimar         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/so_long.h"
 
 bool is_valid_input(char *str)
@@ -11,19 +23,16 @@ bool is_valid_input(char *str)
 	return (true);
 }
 
-bool validate_map(char *str)
+bool validate_map(t_data *data, char *str)
 {
-	int fd;
-	char **lines;
-	
-	fd = open(str, O_RDONLY);
-	if (fd < 0)
+	data->fd = open(str, O_RDONLY);
+	if (data->fd < 0)
 	{
 		get_error(FILE_NOT_FOUND);
 		return (false);
 	}
-	while ()
-	
+	if (get_coordinates(data) == false)
+		return (false);
 	return (true);
 }
 

@@ -9,6 +9,9 @@
 
 typedef struct s_data{
 	int collectibles;
+	int fd;
+	size_t x;
+	size_t y;
 }               t_data;
 
 typedef enum s_error {
@@ -19,6 +22,8 @@ typedef enum s_error {
 // - - - Functions - - - 
 bool    is_valid_input(char *str);
 void	get_error(t_error error);
-bool	validate_map(char *str);
+bool	validate_map(t_data *data, char *str);
+bool	get_coordinates(t_data *data);
+bool	get_x(t_data *data, char **lines);
 
 #endif

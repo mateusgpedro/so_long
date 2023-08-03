@@ -6,23 +6,24 @@
 /*   By: maguimar <maguimar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 14:18:52 by maguimar          #+#    #+#             */
-/*   Updated: 2022/11/25 14:14:48 by maguimar         ###   ########.fr       */
+/*   Updated: 2023/08/03 15:20:06 by maguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/get_next_line.h"
+#include "../includes/so_long.h"
 
-size_t	ft_strlen(const char *str)
-{
-	size_t	i;
+// size_t	ft_strlen(const char *str)
+// {
+// 	size_t	i;
 
-	if (!str)
-		return (0);
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
+// 	if (!str)
+// 		return (0);
+// 	i = 0;
+// 	while (str[i])
+// 		i++;
+// 	return (i);
+// }
 
 static char	*read_n_stash(int fd, char *stashed)
 {
@@ -111,10 +112,3 @@ char	*get_next_line(int fd)
 	stashed = clear_returned_line(stashed);
 	return (result);
 }
-/*
-int	main()
-{
-	char *path = "teste.txt";
-	int fd = open(path, O_RDONLY);
-	printf("%s", get_next_line(fd));
-} */
