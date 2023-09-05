@@ -9,6 +9,7 @@
 
 typedef struct s_data{
 	int collectibles;
+    char* file_name;
 	int fd;
 	size_t x;
 	size_t y;
@@ -16,14 +17,15 @@ typedef struct s_data{
 
 typedef enum s_error {
 	INVALID_INPUT = 0,
-	FILE_NOT_FOUND = 1
+	FILE_NOT_FOUND = 1,
+    INVALID_MAP_SIZE_X = 2
 }				t_error;
 
 // - - - Functions - - - 
 bool    is_valid_input(char *str);
 void	get_error(t_error error);
 bool	validate_map(t_data *data, char *str);
-bool	get_coordinates(t_data *data);
-bool	get_x(t_data *data, char **lines);
+void 	get_y(t_data *data);
+void    get_x(t_data *data);
 
 #endif

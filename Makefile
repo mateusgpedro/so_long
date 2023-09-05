@@ -1,7 +1,7 @@
 NAME	=	so_long
 
-CC		=	cc
-CFLAGS	=	-Wall -Wextra -Werror
+CC		=	gcc
+CFLAGS	=	-g -Wall -Wextra -Werror
 RM		=	rm -rf
 
 LIBDIR = ./libft

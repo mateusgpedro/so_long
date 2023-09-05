@@ -17,6 +17,7 @@ int main(int argc, char **argv)
 	t_data *data;
 	
 	data = ft_calloc(1, sizeof(t_data));
+    data->file_name = argv[1];
 	if (argc != 2 || !is_valid_input(argv[1]))
 		get_error(INVALID_INPUT);
 	validate_map(data, argv[1]);

@@ -12,7 +12,7 @@
 
 NAME = libft.a
 
-CC = cc
+CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 
 SRC = ft_isalpha.c ft_atoi.c ft_strlen.c ft_strlcat.c \

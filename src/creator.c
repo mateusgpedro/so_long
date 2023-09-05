@@ -1,34 +1,43 @@
 #include "../includes/so_long.h"
 
-bool get_coordinates(t_data *data)
+void get_y(t_data *data)
 {
-    char **lines;
-    int i;
+    char* tmp;
 
-    lines = NULL;
-    i = 0;
     while (true)
     {
-        lines[i] = ft_strdup(get_next_line(data->fd));
-        if (lines[i][ft_strlen(lines[i])] == '\0')
+        tmp = get_next_line(data->fd);
+        if (!tmp)
+        {
             break;
-        i++;
+        }
+        free(tmp);
+		data->y++;
     }
-    data->y = i;
-    get_x(data, lines);
-    return true;
+    free(tmp);
+    close(data->fd);
 }
 
-bool get_x(t_data *data, char **lines)
+void get_x(t_data *data)
 {
-    int i;
+    char    *tmp;
+    size_t     i;
 
-    i = data->y;
-    data->x = ft_strlen(lines[i]);
-    while (i-- > 0)
+    data->fd = open(data->file_name, O_RDONLY);
+    i = 0;
+    while (i < data->y)
     {
-        if (ft_strlen(ft_strtrim(lines[i], "\n")) != data->y)
-            return false;
+        if (i < data->y)
+            tmp = ft_strtrim(get_next_line(data->fd), "\n");
+        else
+            tmp = get_next_line(data->fd);
+        if (data->x != ft_strlen(tmp) && i > 0)
+        {
+            get_error(INVALID_MAP_SIZE_X);
+            exit(EXIT_FAILURE);
+        }
+        data->x = ft_strlen(tmp);
+        free(tmp);
+        i++;
     }
-    return true;
 }
