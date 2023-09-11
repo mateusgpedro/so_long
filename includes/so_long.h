@@ -27,5 +27,6 @@ void	get_error(t_error error);
 bool	validate_map(t_data *data, char *str);
 void 	get_y(t_data *data);
 void    get_x(t_data *data);
+void    verify_file_data(t_data *data);
 
 #endif
