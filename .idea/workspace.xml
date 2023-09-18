@@ -19,9 +19,8 @@
   <component name="ChangeListManager">
     <list default="true" id="502a5fe2-751f-4838-93be-812bbdbd9aa7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/tasks.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/so_long.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/so_long.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maps/test.ber" beforeDir="false" afterPath="$PROJECT_DIR$/maps/test.ber" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/minilibx-linux" beforeDir="false" afterPath="$PROJECT_DIR$/minilibx-linux" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/minilibx-linux/man/man1/mlx_loop.1" beforeDir="false" afterPath="$PROJECT_DIR$/minilibx-linux/man/man1/mlx_loop.1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/minilibx-linux/man/man1/mlx_new_image.1" beforeDir="false" afterPath="$PROJECT_DIR$/minilibx-linux/man/man1/mlx_new_image.1" afterDir="false" />
@@ -33,6 +32,7 @@
       <change beforePath="$PROJECT_DIR$/minilibx-linux/rgb2c.pl" beforeDir="false" afterPath="$PROJECT_DIR$/minilibx-linux/rgb2c.pl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/creator.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/creator.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/handler.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/handler.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/verifications.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/verifications.c" afterDir="false" />
     </list>
@@ -154,10 +154,34 @@
       <workItem from="1694691897488" duration="632000" />
       <workItem from="1694695893577" duration="6915000" />
       <workItem from="1694705846934" duration="424000" />
+      <workItem from="1695046727511" duration="7637000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/includes/so_long.h</url>
+          <line>3</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/src/utils.c</url>
+          <line>48</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="CLionNativeAppRunConfigurationType">
+        <watch expression="map" />
+        <watch expression="data" />
+        <watch expression="data" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

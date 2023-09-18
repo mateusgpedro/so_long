@@ -18,10 +18,10 @@ void    get_height(t_data *data)
     close(data->fd);
 }
 
-void    get_x(t_data *data)
+void    get_width(t_data *data)
 {
     char    *tmp;
-    size_t     i;
+    int     i;
 
     data->fd = open(data->file_name, O_RDONLY);
     i = 0;
@@ -31,21 +31,22 @@ void    get_x(t_data *data)
             tmp = ft_strtrim(get_next_line(data->fd), "\n");
         else
             tmp = get_next_line(data->fd);
-        if (data->width != ft_strlen(tmp) && i > 0)
+        if (data->width != (int) ft_strlen(tmp) && i > 0)
         {
             get_error(INVALID_MAP_SIZE_X);
             exit(EXIT_FAILURE);
         }
-        data->width = ft_strlen(tmp);
+        data->width = (int) ft_strlen(tmp);
         free(tmp);
         i++;
     }
+    close(data->fd);
 }
 
 void store_map(t_data *data)
 {
-    size_t      i;
-    size_t      j;
+    int      i;
+    int      j;
     char    *tmp;
 
     i = 0;
@@ -55,7 +56,7 @@ void store_map(t_data *data)
     {
         j = 0;
         tmp = get_trimed_line(data, i);
-        data->map[i] = ft_strdup(tmp);
+        data->map[i] = tmp;
         while (j < data->width)
         {
             if (tmp[j] == 'C')
@@ -63,7 +64,11 @@ void store_map(t_data *data)
             else if (tmp[j] == 'E')
                 data->exits_found++;
             else if (tmp[j] == 'P')
+            {
                 data->players_found++;
+                data->player_position.y = i;
+                data->player_position.x = j;
+            }
             j++;
         }
         i++;

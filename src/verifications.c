@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "../includes/so_long.h"
-#include "get_next_line.h"
 
 bool is_valid_input(char *str)
 {
@@ -33,18 +32,22 @@ bool validate_map(t_data *data, char *str)
 		return (false);
 	}
 	get_height(data);
-    get_x(data);
+    get_width(data);
     verify_file_data(data);
     verify_walls(data);
     store_map(data);
+    check_characters(data);
+    duplicate_map(data);
+    if (floodfill(data, data->map_dup, data->player_position.x, data->player_position.y) == false)
+        get_error(UNREACHABLE_POSITION);
     return (true);
 }
 
 void verify_file_data(t_data *data)
 {
     char    *tmp;
-    size_t     i;
-	size_t		j;
+    int     i;
+	int		j;
 
     i = 0;
     data->fd = open(data->file_name, O_RDONLY);
@@ -66,8 +69,8 @@ void verify_file_data(t_data *data)
 
 void verify_walls(t_data *data)
 {
-    size_t      i;
-    size_t      j;
+    int      i;
+    int      j;
     char    *tmp;
 
     i = 0;
@@ -92,5 +95,10 @@ void verify_walls(t_data *data)
 
 void check_characters(t_data *data)
 {
-    if (data.)
+    if (data->collectibles < 1)
+        get_error(UNEXPECTED_NUMBER_OF_COLLECTIBLES);
+    if (data->players_found != 1)
+        get_error(UNEXPECTED_NUMBER_OF_PLAYERS);
+    if (data->exits_found != 1)
+        get_error(UNEXPECTED_NUMBER_OF_EXITS);
 }
