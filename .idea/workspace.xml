@@ -19,6 +19,7 @@
   <component name="ChangeListManager">
     <list default="true" id="502a5fe2-751f-4838-93be-812bbdbd9aa7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/so_long.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/so_long.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/maps/test.ber" beforeDir="false" afterPath="$PROJECT_DIR$/maps/test.ber" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/minilibx-linux" beforeDir="false" afterPath="$PROJECT_DIR$/minilibx-linux" afterDir="false" />
@@ -30,11 +31,8 @@
       <change beforePath="$PROJECT_DIR$/minilibx-linux/man/man3/mlx_pixel_put.3" beforeDir="false" afterPath="$PROJECT_DIR$/minilibx-linux/man/man3/mlx_pixel_put.3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/minilibx-linux/mlx.h" beforeDir="false" afterPath="$PROJECT_DIR$/minilibx-linux/mlx.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/minilibx-linux/rgb2c.pl" beforeDir="false" afterPath="$PROJECT_DIR$/minilibx-linux/rgb2c.pl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/creator.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/creator.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/handler.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/handler.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/verifications.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/verifications.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,6 +133,11 @@
         <option name="CLION.COMPOUND.BUILD" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Makefile Application.all" />
       <item itemvalue="Makefile Application.fclean" />
@@ -154,7 +157,11 @@
       <workItem from="1694691897488" duration="632000" />
       <workItem from="1694695893577" duration="6915000" />
       <workItem from="1694705846934" duration="424000" />
-      <workItem from="1695046727511" duration="7637000" />
+      <workItem from="1695046727511" duration="7723000" />
+      <workItem from="1697297875830" duration="5275000" />
+      <workItem from="1697477923489" duration="402000" />
+      <workItem from="1697484966441" duration="4127000" />
+      <workItem from="1697724205251" duration="602000" />
     </task>
     <servers />
   </component>
@@ -162,20 +169,6 @@
     <option name="version" value="3" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/includes/so_long.h</url>
-          <line>3</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/src/utils.c</url>
-          <line>48</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="CLionNativeAppRunConfigurationType">
         <watch expression="map" />

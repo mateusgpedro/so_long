@@ -21,5 +21,9 @@ int main(int argc, char **argv)
 	if (argc != 2 || !is_valid_input(argv[1]))
 		get_error(INVALID_INPUT);
 	validate_map(data, argv[1]);
-    return 0;
+    init_map(data);
+    data->mlx = mlx_init();
+    data->window = mlx_new_window(data->mlx, (data->width * 64), (data->height * 64), "so_long");
+    mlx_loop(data->mlx);
+    return (0);
 }

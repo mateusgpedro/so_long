@@ -17,7 +17,7 @@ HEADER += $(INCLUDES)get_next_line.h
 
 vpath %.c src/
 
-SRCS += main.c verifications.c utils.c creator.c handler.c
+SRCS += main.c verifications.c utils.c creator.c handler.c initmap.c
 
 OBJ_DIR = ./obj/
 

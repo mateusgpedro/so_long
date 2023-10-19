@@ -25,6 +25,7 @@ char *get_trimed_line(t_data *data, int index)
 
 void    declare_data_vars(t_data *data, char *file_name)
 {
+    data->sprites = ft_calloc(1, sizeof(t_sprites));
     data->collectibles = 0;
     data->players_found = 0;
     data->exits_found = 0;

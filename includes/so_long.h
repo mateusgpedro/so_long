@@ -2,27 +2,51 @@
 # define SO_LONG_H
 
 #include "get_next_line.h"
+#include "X11/X.h"
 #include "../libft/ft_printf.h"
 #include "../libft/libft.h"
 #include "../minilibx-linux/mlx.h"
 #include <stdbool.h>
+
+#define SIZE = 64
+#define WALL
+#define COLLECTIBLE
+#define EXIT
+#define PLAYER_DOWN
+#define PLAYER_UP
+#define PLAYER_LEFT
+#define PLAYER_RIGHT
 
 typedef struct s_vector {
     int x;
     int y;
 }               t_vector;
 
-typedef struct s_data{
-	int collectibles;
-    int exits_found;
-    int players_found;
-    char* file_name;
-	int fd;
-	int width;
-	int height;
-    char **map;
-    char **map_dup;
-    t_vector player_position;
+typedef struct s_sprites {
+    void*   collectibles_sprite;
+    void*   exit_sprite;
+    void*   wall_sprite;
+    void*   empty_sprite;
+    void*   player_sprite_left;
+    void*   player_sprite_right;
+    void*   player_sprite_up;
+    void*   player_sprite_down;
+}              t_sprites;
+
+typedef struct s_data {
+    void        *mlx;
+    void        *window;
+	int         collectibles;
+    int         exits_found;
+    int         players_found;
+    char*       file_name;
+	int         fd;
+	int         width;
+	int         height;
+    char        **map;
+    char        **map_dup;
+    t_sprites   *sprites;
+    t_vector    player_position;
 }               t_data;
 
 typedef enum s_error {
@@ -51,5 +75,6 @@ void    store_map(t_data *data);
 void    declare_data_vars(t_data *data, char *file_name);
 void    check_characters(t_data *data);
 void    duplicate_map(t_data *data);
+void    init_map(t_data *data);
 
 #endif
