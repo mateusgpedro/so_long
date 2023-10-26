@@ -23,7 +23,7 @@ char *get_trimed_line(t_data *data, int index)
     return (line);
 }
 
-void    declare_data_vars(t_data *data, char *file_name)
+void    init_data(t_data *data, char *file_name)
 {
     data->sprites = ft_calloc(1, sizeof(t_sprites));
     data->collectibles = 0;

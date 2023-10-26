@@ -8,14 +8,16 @@
 #include "../minilibx-linux/mlx.h"
 #include <stdbool.h>
 
-#define SIZE = 64
-#define WALL
-#define COLLECTIBLE
-#define EXIT
-#define PLAYER_DOWN
-#define PLAYER_UP
-#define PLAYER_LEFT
-#define PLAYER_RIGHT
+#define SIZE 64
+#define WALL "../sprites/Wall.xpm"
+#define EMPTY "../sprites/Empty.xpm"
+#define COLLECTIBLE "../sprites/Collectible.xpm"
+#define EXIT_CLOSED "../sprites/Exit_Closed.xpm"
+#define EXIT_OPEN "../sprites/Exit_Open.xpm"
+#define PLAYER_DOWN "../sprites/Pacman_Down.xpm"
+#define PLAYER_UP "../sprites/Pacman_Up.xpm"
+#define PLAYER_LEFT "../sprites/Pacman_Left.xpm"
+#define PLAYER_RIGHT "../sprites/Pacman_Right.xpm"
 
 typedef struct s_vector {
     int x;
@@ -24,7 +26,8 @@ typedef struct s_vector {
 
 typedef struct s_sprites {
     void*   collectibles_sprite;
-    void*   exit_sprite;
+    void*   exit_opened_sprite;
+    void*   exit_closed_sprite;
     void*   wall_sprite;
     void*   empty_sprite;
     void*   player_sprite_left;
@@ -72,9 +75,10 @@ void    verify_walls(t_data *data);
 char    *get_trimed_line(t_data *data, int index);
 bool    floodfill(t_data *data, char **map, int x, int y);
 void    store_map(t_data *data);
-void    declare_data_vars(t_data *data, char *file_name);
+void    init_data(t_data *data, char *file_name);
 void    check_characters(t_data *data);
 void    duplicate_map(t_data *data);
 void    init_map(t_data *data);
+void    render_map(t_data *data);
 
 #endif

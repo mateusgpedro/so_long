@@ -17,13 +17,13 @@ int main(int argc, char **argv)
 	t_data *data;
 	
 	data = ft_calloc(1, sizeof(t_data));
-    declare_data_vars(data, argv[1]);
+    init_data(data, argv[1]);
 	if (argc != 2 || !is_valid_input(argv[1]))
 		get_error(INVALID_INPUT);
 	validate_map(data, argv[1]);
-    init_map(data);
     data->mlx = mlx_init();
-    data->window = mlx_new_window(data->mlx, (data->width * 64), (data->height * 64), "so_long");
+    data->window = mlx_new_window(data->mlx, (data->height * SIZE), (data->width * SIZE), "so_long");
+    init_map(data);
     mlx_loop(data->mlx);
     return (0);
 }

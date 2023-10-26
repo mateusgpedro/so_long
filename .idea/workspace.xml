@@ -19,9 +19,7 @@
   <component name="ChangeListManager">
     <list default="true" id="502a5fe2-751f-4838-93be-812bbdbd9aa7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/so_long.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/so_long.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maps/test.ber" beforeDir="false" afterPath="$PROJECT_DIR$/maps/test.ber" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/minilibx-linux" beforeDir="false" afterPath="$PROJECT_DIR$/minilibx-linux" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/minilibx-linux/man/man1/mlx_loop.1" beforeDir="false" afterPath="$PROJECT_DIR$/minilibx-linux/man/man1/mlx_loop.1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/minilibx-linux/man/man1/mlx_new_image.1" beforeDir="false" afterPath="$PROJECT_DIR$/minilibx-linux/man/man1/mlx_new_image.1" afterDir="false" />
@@ -31,6 +29,7 @@
       <change beforePath="$PROJECT_DIR$/minilibx-linux/man/man3/mlx_pixel_put.3" beforeDir="false" afterPath="$PROJECT_DIR$/minilibx-linux/man/man3/mlx_pixel_put.3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/minilibx-linux/mlx.h" beforeDir="false" afterPath="$PROJECT_DIR$/minilibx-linux/mlx.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/minilibx-linux/rgb2c.pl" beforeDir="false" afterPath="$PROJECT_DIR$/minilibx-linux/rgb2c.pl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/initmap.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/initmap.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils.c" afterDir="false" />
     </list>
@@ -133,11 +132,6 @@
         <option name="CLION.COMPOUND.BUILD" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Makefile Application.all" />
       <item itemvalue="Makefile Application.fclean" />
@@ -162,6 +156,8 @@
       <workItem from="1697477923489" duration="402000" />
       <workItem from="1697484966441" duration="4127000" />
       <workItem from="1697724205251" duration="602000" />
+      <workItem from="1697725548635" duration="5224000" />
+      <workItem from="1697733612426" duration="1152000" />
     </task>
     <servers />
   </component>
@@ -169,6 +165,15 @@
     <option name="version" value="3" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/src/initmap.c</url>
+          <line>4</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="CLionNativeAppRunConfigurationType">
         <watch expression="map" />
