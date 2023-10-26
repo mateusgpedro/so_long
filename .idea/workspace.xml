@@ -31,7 +31,6 @@
       <change beforePath="$PROJECT_DIR$/minilibx-linux/rgb2c.pl" beforeDir="false" afterPath="$PROJECT_DIR$/minilibx-linux/rgb2c.pl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/initmap.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/initmap.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,6 +110,13 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/includes" />
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+  </component>
   <component name="RunManager" selected="Makefile Application.all">
     <configuration name="all" type="CLionNativeAppRunConfigurationType" PROGRAM_PARAMS="maps/test.ber" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="so_long" TARGET_NAME="all" CONFIG_NAME="all" version="1" RUN_PATH="$PROJECT_DIR$/so_long">
       <method v="2">
@@ -158,6 +164,8 @@
       <workItem from="1697724205251" duration="602000" />
       <workItem from="1697725548635" duration="5224000" />
       <workItem from="1697733612426" duration="1152000" />
+      <workItem from="1698317666981" duration="3444000" />
+      <workItem from="1698323331455" duration="360000" />
     </task>
     <servers />
   </component>
@@ -165,15 +173,6 @@
     <option name="version" value="3" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/src/initmap.c</url>
-          <line>4</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="CLionNativeAppRunConfigurationType">
         <watch expression="map" />

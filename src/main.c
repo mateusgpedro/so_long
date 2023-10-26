@@ -22,7 +22,7 @@ int main(int argc, char **argv)
 		get_error(INVALID_INPUT);
 	validate_map(data, argv[1]);
     data->mlx = mlx_init();
-    data->window = mlx_new_window(data->mlx, (data->height * SIZE), (data->width * SIZE), "so_long");
+    data->window = mlx_new_window(data->mlx, (data->width * SIZE), (data->height * SIZE), "so_long");
     init_map(data);
     mlx_loop(data->mlx);
     return (0);

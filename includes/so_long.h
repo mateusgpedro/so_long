@@ -9,15 +9,15 @@
 #include <stdbool.h>
 
 #define SIZE 64
-#define WALL "../sprites/Wall.xpm"
-#define EMPTY "../sprites/Empty.xpm"
-#define COLLECTIBLE "../sprites/Collectible.xpm"
-#define EXIT_CLOSED "../sprites/Exit_Closed.xpm"
-#define EXIT_OPEN "../sprites/Exit_Open.xpm"
-#define PLAYER_DOWN "../sprites/Pacman_Down.xpm"
-#define PLAYER_UP "../sprites/Pacman_Up.xpm"
-#define PLAYER_LEFT "../sprites/Pacman_Left.xpm"
-#define PLAYER_RIGHT "../sprites/Pacman_Right.xpm"
+#define WALL "./sprites/Wall.xpm"
+#define EMPTY "./sprites/Empty.xpm"
+#define COLLECTIBLE "./sprites/Collectible.xpm"
+#define EXIT_CLOSED "./sprites/Exit_Closed.xpm"
+#define EXIT_OPEN "./sprites/Exit_Open.xpm"
+#define PLAYER_DOWN "./sprites/Pacman_Down.xpm"
+#define PLAYER_UP "./sprites/Pacman_Up.xpm"
+#define PLAYER_LEFT "./sprites/Pacman_Left.xpm"
+#define PLAYER_RIGHT "./sprites/Pacman_Right.xpm"
 
 typedef struct s_vector {
     int x;
